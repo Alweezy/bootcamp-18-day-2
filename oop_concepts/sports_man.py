@@ -22,3 +22,14 @@ class Player(SportsMan):
     def __init__(self, fname, lname, salary, skillset=None):
         super(Player, self).__init__(fname, lname, salary)
         self.skillset = skillset
+
+
+class Coach(SportsMan):
+    """A second class inheriting from SportsMan"""
+    pay_raise_index = 2.4
+
+    def __init__(self, fname, lname, salary, players=None):
+        super(Coach, self).__init__(fname, lname, salary)
+        if players is None:
+            self.players = []
+        self.players = players
