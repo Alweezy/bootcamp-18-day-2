@@ -1,5 +1,5 @@
 from unittest import TestCase
-from sports_man import SportsMan, Player
+from sports_man import SportsMan, Player, Coach
 
 
 class TestCasesSportsMan(TestCase):
@@ -26,3 +26,20 @@ class TestCasesPlayer(TestCase):
     def test_pay_raise_is_right(self):
         self.player = Player('Wayne', 'Rooney', 100000, '[Dribble, Finesse]')
         self.assertEqual(self.player.pay_raise(), 200000)
+
+
+class TestCasesCoach(TestCase):
+    def test_player_inherits_from_SportsMan(self):
+        self.assertTrue(issubclass(Coach, SportsMan))
+
+    def test_player_full_name(self):
+        self.coach = Coach('Jose', 'Murhinho', 10000, ['Wayne Rooney', 'Marcus Rashford'])
+        self.assertTrue(self.coach.fullname(), 'Jose Murhinho')
+
+    def test_pay_raise_is_right(self):
+        self.coach = Coach('Wayne', 'Rooney', 100000, ['Wayne Rooney', 'Marcus Rashford'])
+        self.assertEqual(self.coach.pay_raise(), 240000)
+
+    def test__can_have_no_players(self):
+        self.coach = Coach('Wayne', 'Rooney', 100000)
+        self.assertEqual(self.coach.players, None)
