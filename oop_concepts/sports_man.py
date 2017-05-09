@@ -18,3 +18,7 @@ class SportsMan(object):
 class Player(SportsMan):
     """This is a child class which inherits from SportsMan"""
     pay_raise_index = 2.0
+
+    def __init__(self, fname, lname, salary, skillset=None):
+        super(Player, self).__init__(fname, lname, salary)
+        self.skillset = skillset
