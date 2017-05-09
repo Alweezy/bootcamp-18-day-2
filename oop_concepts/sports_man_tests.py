@@ -1,5 +1,5 @@
 from unittest import TestCase
-from sports_man import SportsMan
+from sports_man import SportsMan, Player
 
 
 class TestCasesSportsMan(TestCase):
@@ -12,3 +12,9 @@ class TestCasesSportsMan(TestCase):
     def test_pay_raise_is_right(self):
         self.sportsman = SportsMan('Allan', 'Smith', 60000)
         self.assertEqual(self.sportsman.pay_raise(), 90000)
+
+
+class TestCasesPlayer(TestCase):
+    """Test is the class player inherits from Sportsman """
+    def test_player_inherits_from_SportsMan(self):
+        self.assertTrue(issubclass(Player, SportsMan))
