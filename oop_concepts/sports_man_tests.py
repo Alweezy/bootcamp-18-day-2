@@ -14,6 +14,6 @@ class TestCasesSportsMan(TestCase):
     def test_sportsman_full_name(self):
         self.assertTrue(self.sportsman.fullname('John' + 'Doe'), 'John Doe')
 
-    def test_pay_rise_is_right(self):
+    def test_pay_raise_is_right(self):
         self.pay_raise_index = 1.5
-        self.assertTrue(self.sportsman.pay_rise(2000 * self.pay_raise_index), 30000)
+        self.assertTrue(self.sportsman.pay_raise(2000 * self.pay_raise_index), 30000)
