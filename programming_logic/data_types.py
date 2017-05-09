@@ -1,11 +1,11 @@
 def data_type(value):
-    if type(value) is str:
+    if isinstance(value, str):
         return len(value)
     elif value is None:
         return 'no value'
-    elif type(value) is bool:
+    elif isinstance(value, bool):
         return value
-    elif type(value) is int:
+    elif isinstance(value, int):
         if value < 100:
             return 'less than 100'
         elif value is 100:
@@ -14,7 +14,7 @@ def data_type(value):
             return 'more than 100'
         else:
             return 'integer value not recognized'
-    elif type(value) is list:
+    elif isinstance(value, list):
         if len(value) >= 3:
             return value[2]
         else:
