@@ -1,4 +1,5 @@
 class SportsMan(object):
+    """This is the parent class, from which other classes inherit """
     pay_raise_index = 1.5
 
     def __init__(self,  fname, lname, salary):
