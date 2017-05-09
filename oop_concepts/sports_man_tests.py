@@ -18,3 +18,11 @@ class TestCasesPlayer(TestCase):
     """Test is the class player inherits from Sportsman """
     def test_player_inherits_from_SportsMan(self):
         self.assertTrue(issubclass(Player, SportsMan))
+
+    def test_player_full_name(self):
+        self.player = Player('Wayne', 'Rooney', 10000)
+        self.assertTrue(self.player.fullname(), 'Wayne Rooney')
+
+    def test_pay_raise_is_right(self):
+        self.player = Player('Wayne', 'Rooney', 100000)
+        self.assertEqual(self.player.pay_raise(), 200000)
