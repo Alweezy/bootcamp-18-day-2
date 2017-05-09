@@ -1,6 +1,6 @@
 class SportsMan(object):
     pay_raise_index = 1.5
-
+    
     def __init__(self,  fname, lname, salary):
         self.fname = fname
         self.lname = lname
@@ -13,4 +13,7 @@ class SportsMan(object):
         self.salary *= self.pay_raise_index
         return self.salary
 
-    
+
+class Player(SportsMan):
+    """This is a child class which inherits from Sportsman"""
+    pass
