@@ -42,4 +42,4 @@ class TestCasesCoach(TestCase):
 
     def test__can_have_no_players(self):
         self.coach = Coach('Wayne', 'Rooney', 100000)
-        self.assertEqual(self.coach.players, None)
+        self.assertEqual(self.coach._players, None)
