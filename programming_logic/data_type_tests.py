@@ -3,6 +3,9 @@ from data_types import data_type
 
 
 class DataTypeTestCase(TestCase):
+    """A function called data_type, that takes one argument,
+       compares and returns results, based on the argument supplied to the function.
+    """
     def test_none_type(self):
         self.assertEqual('no value', data_type(None))
 
