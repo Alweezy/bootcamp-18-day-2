@@ -3,16 +3,16 @@ class SportsMan(object):
     pay_raise_index = 1.5
 
     def __init__(self,  fname, lname, salary):
-        self.fname = fname
-        self.lname = lname
-        self.salary = salary
+        self._fname = fname
+        self._lname = lname
+        self._salary = salary
 
     def fullname(self):
-        return self.fname + ' ' + self.lname
+        return self._fname + ' ' + self._lname
 
     def pay_raise(self):
-        self.salary *= self.pay_raise_index
-        return self.salary
+        self._salary *= self.pay_raise_index
+        return self._salary
 
 
 class Player(SportsMan):
@@ -21,7 +21,7 @@ class Player(SportsMan):
 
     def __init__(self, fname, lname, salary, skillset=None):
         super(Player, self).__init__(fname, lname, salary)
-        self.skillset = skillset
+        self._skillset = skillset
 
 
 class Coach(SportsMan):
@@ -31,5 +31,5 @@ class Coach(SportsMan):
     def __init__(self, fname, lname, salary, players=None):
         super(Coach, self).__init__(fname, lname, salary)
         if players is None:
-            self.players = []
-        self.players = players
+            self._players = []
+        self._players = players
