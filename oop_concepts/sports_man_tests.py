@@ -24,5 +24,5 @@ class TestCasesPlayer(TestCase):
         self.assertTrue(self.player.fullname(), 'Wayne Rooney')
 
     def test_pay_raise_is_right(self):
-        self.player = Player('Wayne', 'Rooney', 100000, 'Dribble')
+        self.player = Player('Wayne', 'Rooney', 100000, '[Dribble, Finesse]')
         self.assertEqual(self.player.pay_raise(), 200000)
