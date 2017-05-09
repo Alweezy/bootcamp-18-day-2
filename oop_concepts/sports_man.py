@@ -17,4 +17,4 @@ class SportsMan(object):
 
 class Player(SportsMan):
     """This is a child class which inherits from SportsMan"""
-    pass
+    pay_raise_index = 2.0
